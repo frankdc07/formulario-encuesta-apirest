@@ -1,11 +1,13 @@
 package com.sic.formulario.encuesta.apirest.models.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sic.formulario.encuesta.apirest.models.dao.IUsuarioDao;
 import com.sic.formulario.encuesta.apirest.models.entity.Usuario;
 
+@Service
 public class UsuarioServiceImpl implements IUsuarioService {
 	
 	@Autowired

@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
-public class FormularioEncuestaApplication implements CommandLineRunner {
+public class FormularioEncuestaApplication {
 	
 	@Autowired
 	private BCryptPasswordEncoder passEncoder;
@@ -16,14 +16,5 @@ public class FormularioEncuestaApplication implements CommandLineRunner {
 		SpringApplication.run(FormularioEncuestaApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		
-		String pass = "12345";
-		for (int i = 0; i < 3; i++) {
-			System.out.println(this.passEncoder.encode(pass));
-		}
-		
-	}
 
 }

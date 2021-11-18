@@ -2,6 +2,7 @@ package com.sic.formulario.encuesta.apirest.models.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +15,8 @@ public class MarcaPC implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;	
+	private Long id;
+	@Column(nullable = false, length = 15)
 	private String nombre;
 	
 	public Long getId() {

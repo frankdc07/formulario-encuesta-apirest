@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+
 @Entity
 @Table(name = "formularios")
 public class Formulario implements Serializable {
@@ -22,7 +23,9 @@ public class Formulario implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Long documento;
+	@Column(nullable = false, length = 20)
+	private String documento;
+	@Column(nullable = false, length = 50)
 	private String correo;
 	private String comentarios;
 	
@@ -45,10 +48,10 @@ public class Formulario implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getDocumento() {
+	public String getDocumento() {
 		return documento;
 	}
-	public void setDocumento(Long documento) {
+	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
 	public String getCorreo() {

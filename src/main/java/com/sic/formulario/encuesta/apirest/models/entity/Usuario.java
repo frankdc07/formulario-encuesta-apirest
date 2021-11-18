@@ -25,7 +25,8 @@ public class Usuario implements Serializable {
 	private String password;
 
 	private Boolean activo;
-
+	
+	@Column(length = 15)
 	private String rol;
 	
 	@PrePersist
